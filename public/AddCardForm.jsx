@@ -1,6 +1,8 @@
 import Button from "../public/Button";
 import { Form, Input, Label, InputRow } from "../public/Form";
 
+import Link from "next/link";
+
 export default function AddCardForm() {
   return (
     <Form>
@@ -14,7 +16,9 @@ export default function AddCardForm() {
       </InputRow>
 
       <Button>Submit</Button>
-      <Button>Cancel</Button>
+      <Link href="/">
+        <Button>Cancel</Button>
+      </Link>
     </Form>
   );
 }
