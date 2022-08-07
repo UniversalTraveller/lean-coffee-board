@@ -1,11 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import { ThemeProvider } from "styled-components";
-import Button from "../public/Button";
 import Page from "../public/Page";
 import { theme } from "../styles/theme";
+import AddCardForm from "../public/AddCardForm";
 
-export default function Home() {
+export default function AddCard() {
   return (
     <>
       <Head>
@@ -13,9 +12,7 @@ export default function Home() {
       </Head>
       <ThemeProvider theme={theme}>
         <Page>
-          <a href="./add-card">
-            <Button>Add card</Button>
-          </a>
+          <AddCardForm />
         </Page>
       </ThemeProvider>
     </>
