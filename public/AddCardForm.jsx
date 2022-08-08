@@ -1,14 +1,14 @@
-import Button from "../public/Button";
-import { Form, Input, Label, InputRow } from "../public/Form";
-
-import { useState } from "react";
+import { Button, LinkButton } from "../public/Button";
 import Link from "next/link";
-import Router, { useRouter } from "next/router";
+import { Form, Input, Label, InputRow } from "../public/Form";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function AddCardForm() {
   //variables for topic and author with the useState hook
   const [topic, setTopic] = useState("");
   const [author, setAuthor] = useState("");
+
   const router = useRouter();
 
   function handleSubmit(event) {
@@ -28,6 +28,7 @@ export default function AddCardForm() {
           onChange={(event) => setTopic(event.target.value)}
         />
       </InputRow>
+
       <InputRow>
         <Label htmlFor="author">Author</Label>
         <Input
@@ -41,9 +42,7 @@ export default function AddCardForm() {
       <Button type="submit">Submit</Button>
 
       <Link href="/">
-        <Button type="button" onClick={(event) => (window.location.href = "/")}>
-          Cancel
-        </Button>
+        <LinkButton type="button">Cancel</LinkButton>
       </Link>
     </Form>
   );

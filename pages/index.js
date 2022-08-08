@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
 import { ThemeProvider } from "styled-components";
-import Button from "../public/Button";
+import { LinkButton } from "../public/Button";
 import Page from "../public/Page";
 import { theme } from "../styles/theme";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,9 +13,9 @@ export default function Home() {
       </Head>
       <ThemeProvider theme={theme}>
         <Page>
-          <a href="./add-card">
-            <Button>Add card</Button>
-          </a>
+          <Link href="/add-card">
+            <LinkButton>Add card</LinkButton>
+          </Link>
         </Page>
       </ThemeProvider>
     </>

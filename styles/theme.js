@@ -6,8 +6,9 @@ export const theme = {
     secondaryDark: "#593C8F",
     highlight: "DB5461",
   },
-  fonts: {
+  font: {
     primary: "Arial, Helvetica, sans-serif",
     secondary: "Times New Roman, serif",
+    sizeStandard: "1rem",
   },
 };
