@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Button = styled.button`
   background-color: transparent;
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
   border-style: none;
   color: ${(props) => props.theme.colors.primaryLight};
   background-color: ${(props) => props.theme.colors.secondaryDark};
@@ -17,7 +17,7 @@ const Button = styled.button`
 
 const LinkButton = styled.a`
   background-color: transparent;
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
   border-style: none;
   color: ${(props) => props.theme.colors.primaryLight};
   background-color: ${(props) => props.theme.colors.secondaryDark};

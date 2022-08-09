@@ -5,6 +5,8 @@ const Page = styled.div`
   font-family: ${(props) => props.theme.font.primary};
   background-color: ${(props) => props.theme.colors.secondaryLight};
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 `;
 
 export default Page;
