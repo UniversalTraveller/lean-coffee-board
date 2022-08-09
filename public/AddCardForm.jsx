@@ -3,22 +3,24 @@ import Link from "next/link";
 import { Form, Input, Label, InputRow } from "../public/Form";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { useStore } from "../src/useStore";
 
 export default function AddCardForm() {
   //variables for topic and author with the useState hook
   const [topic, setTopic] = useState("");
   const [author, setAuthor] = useState("");
+  const addTopic = useStore((state) => state.addTopic);
 
   const router = useRouter();
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    console.log(topic, author);
-    router.push("/");
-  }
-
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form
+      onSubmit={(event) => {
+        event.preventDefault();
+        addTopic(topic, author);
+        router.push("/");
+      }}
+    >
       <InputRow>
         <Label htmlFor="topic">Topic</Label>
         <Input

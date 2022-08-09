@@ -19,6 +19,16 @@ const useStore = create((set) => ({
       author: "Practical Python",
     },
   ],
+  addTopic: (topic, author) => {
+    set((state) => {
+      return {
+        topics: [
+          ...state.topics,
+          { id: nanoid(), topic: topic, author: author },
+        ],
+      };
+    });
+  },
 }));
 
 export { useStore };
